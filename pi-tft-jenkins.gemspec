@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Pi::Tft::Jenkins::VERSION
   spec.authors       = ["Yu Nejigane"]
   spec.email         = ["nejigane@preferred.jp"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Job status indicator for Jenkins}
+  spec.description   = %q{Job status indicator for Jenkins based on Raspberry Pi and PiTFT}
   spec.homepage      = "http://nzgn.net/"
   spec.license       = "MIT"
 
