@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require "pi/tft/jenkins"
+require "sinatra"
+
+set :environment, :production
+
+get '/' do
+  Pi::Tft::Jenkins::update_screen('hoge')
+end
