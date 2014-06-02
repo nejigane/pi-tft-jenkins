@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 require "pi/tft/jenkins"
-require "sinatra"
 
-set :environment, :production
+Pi::Tft::Jenkins::App.run!
 
-get '/:status' do
-  Pi::Tft::Jenkins::update_screen('test job', params[:status])
-end
+
+
+
