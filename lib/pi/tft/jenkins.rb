@@ -1,6 +1,7 @@
 require "pi/tft/jenkins/version"
 require "rsvg2"
 require "sinatra/base"
+require "json"
 
 module Pi
   module Tft
@@ -53,8 +54,9 @@ module Pi
 
       class App < Sinatra::Base
         set :environment, :production
-        get '/:status' do
-          Pi::Tft::Jenkins.update_screen('Your Jenkins Job', params[:status].upcase)
+        post '/' do
+          notification = JSON.parse(request.body.read)
+          Pi::Tft::Jenkins.update_screen(notification['name'], notification['build']['status'].upcase)
         end
       end
     end
